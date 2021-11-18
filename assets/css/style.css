@@ -1,3 +1,202 @@
+body {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
 
+nav .logo {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 70px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
+}
+nav .location {
+  background: #eaeaea;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+}
+nav .location .location-wrapper {
+  display: flex;
+}
+nav .location .location-wrapper p {
+  margin: 0;
+  margin-left: 5px;
+  font-weight: 500;
+}
+
+main .about {
+  background: #f6f6f6;
+  height: 270px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 50px;
+}
+main .about .about-wrapper {
+  max-width: 90%;
+}
+main .about h1 {
+  margin: 0;
+}
+main .about p {
+  font-weight: 300;
+}
+main .about a {
+  margin-top: 10px;
+  text-decoration: none;
+  color: white;
+  border-radius: 28px;
+  background: #FF79DA;
+  display: inline-block;
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 14px;
+  padding: 16px 31px;
+  background-image: linear-gradient(to left top, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
+}
+main .functionalities {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 25px;
+}
+main .functionalities ul {
+  list-style: none;
+  padding-left: 10px;
+}
+main .functionalities ul .card {
+  display: flex;
+  align-items: center;
+  background: #f6f6f6;
+  height: 80px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+  border-radius: 15px;
+  margin-bottom: 20px;
+}
+main .functionalities ul .card .card-wrapper {
+  position: relative;
+  display: flex;
+}
+main .functionalities ul .card .card-wrapper span {
+  position: absolute;
+  top: 0%;
+  left: -15px;
+  height: 25px;
+  width: 25px;
+  border-radius: 100%;
+  background: #9356DC;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 14px;
+}
+main .functionalities ul .card .card-wrapper i {
+  padding-left: 25px;
+  font-size: 21px;
+  color: #7e7e7e;
+}
+main .functionalities ul .card .card-wrapper p {
+  padding-left: 25px;
+  font-size: 17px;
+  font-weight: 500;
+  color: black;
+  margin: 0;
+}
+main .restaurants {
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-bottom: 70px;
+  background: #f6f6f6;
+}
+main .restaurants h2 {
+  padding-top: 40px;
+  padding-bottom: 20px;
+}
+main .restaurants .restaurants-cards-list {
+  list-style: none;
+  padding: 0;
+}
+main .restaurants .restaurants-cards-list .restaurants-card {
+  margin-bottom: 25px;
+  background: white;
+  border-radius: 20px;
+  max-width: 600px;
+  height: 270px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+main .restaurants .restaurants-cards-list .restaurants-card .img-wrapper {
+  position: relative;
+}
+main .restaurants .restaurants-cards-list .restaurants-card .img-wrapper img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 20px 20px 0px 0px;
+}
+main .restaurants .restaurants-cards-list .restaurants-card .img-wrapper .label {
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  height: 25px;
+  width: 70px;
+  background: #99E2D0;
+  color: #008766;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  font-size: 14px;
+}
+main .restaurants .restaurants-cards-list .restaurants-card .text-wrapper {
+  position: relative;
+}
+main .restaurants .restaurants-cards-list .restaurants-card .text-wrapper h3, main .restaurants .restaurants-cards-list .restaurants-card .text-wrapper p {
+  margin: 5px 0 5px 0;
+  padding-left: 10px;
+}
+main .restaurants .restaurants-cards-list .restaurants-card .text-wrapper i {
+  position: absolute;
+  top: 30%;
+  right: 5%;
+  font-size: 22px;
+}
+
+footer {
+  background: #353535;
+  height: 250px;
+}
+footer nav ul {
+  list-style: none;
+  padding-left: 25px;
+}
+footer nav ul li {
+  color: white;
+  font-size: 18px;
+  font-weight: 300;
+  padding-bottom: 10px;
+}
+footer nav ul li img {
+  width: 150px;
+  height: 40px;
+  margin-top: 25px;
+  margin-bottom: 10px;
+  filter: invert(100%);
+}
+footer nav ul li i {
+  padding-right: 8px;
+  width: 16px;
+  height: 16px;
+}
+footer nav ul li a {
+  text-decoration: none;
+  color: white;
+}
 
 /*# sourceMappingURL=style.css.map */
