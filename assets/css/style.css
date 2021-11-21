@@ -199,4 +199,11 @@ footer nav ul li a {
   color: white;
 }
 
+.restaurant-nav {
+  display: flex;
+}
+.restaurant-nav .logo-wrapper {
+  display: flex;
+}
+
 /*# sourceMappingURL=style.css.map */

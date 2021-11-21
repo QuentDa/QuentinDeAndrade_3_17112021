@@ -23,7 +23,6 @@ nav{
         height: 70px;
         box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
     }
-
     .location{
         background: $dark-grey;
         display: flex;
@@ -239,5 +238,14 @@ main{
                 }
             }
 
+        }
+    }
+
+    //page restaurants
+    .restaurant-nav{
+        display: flex;
+        
+        .logo-wrapper{
+            display: flex;
         }
     }
