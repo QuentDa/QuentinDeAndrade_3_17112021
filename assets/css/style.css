@@ -4,7 +4,7 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
-nav .logo {
+nav .logo, nav .logo-restaurant {
   position: relative;
   display: flex;
   justify-content: center;
@@ -29,6 +29,20 @@ nav .location .location-wrapper p {
   font-weight: 500;
 }
 
+.button {
+  margin-top: 10px;
+  text-decoration: none;
+  color: white;
+  border-radius: 28px;
+  background: #FF79DA;
+  display: inline-block;
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 14px;
+  padding: 16px 31px;
+  background-image: linear-gradient(to left top, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
+}
+
 main .about {
   background: #f6f6f6;
   height: 270px;
@@ -47,19 +61,6 @@ main .about h1 {
 }
 main .about p {
   font-weight: 300;
-}
-main .about a {
-  margin-top: 10px;
-  text-decoration: none;
-  color: white;
-  border-radius: 28px;
-  background: #FF79DA;
-  display: inline-block;
-  color: #ffffff;
-  font-weight: 500;
-  font-size: 14px;
-  padding: 16px 31px;
-  background-image: linear-gradient(to left top, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
 }
 main .functionalities {
   padding-left: 20px;
@@ -202,8 +203,115 @@ footer nav ul li a {
 .restaurant-nav {
   display: flex;
 }
+.restaurant-nav .logo-restaurant {
+  justify-content: start;
+}
+.restaurant-nav .icon-wrapper {
+  width: 20%;
+}
+.restaurant-nav .icon-wrapper i {
+  padding-left: 10px;
+  font-size: 23px;
+}
 .restaurant-nav .logo-wrapper {
+  width: 60%;
   display: flex;
+  justify-content: center;
+}
+.restaurant-nav .logo-wrapper img {
+  width: 90%;
+  max-width: 100%;
+}
+
+main {
+  position: relative;
+}
+main .restaurant-main-img-wrapper img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+main .restaurant-container {
+  background: #f6f6f6;
+  position: absolute;
+  top: 220px;
+  width: 100%;
+  border-radius: 25px 25px 0 0;
+}
+main .restaurant-container .restaurant-container-wrapper {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+main .restaurant-container .restaurant-container-wrapper .header-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+main .restaurant-container .restaurant-container-wrapper .header-title h2 {
+  margin-bottom: 0;
+  font-family: "Shrikhand", cursive;
+}
+main .restaurant-container .restaurant-container-wrapper .header-title i {
+  color: #7e7e7e;
+  padding-top: 20px;
+  font-size: 21px;
+}
+main .restaurant-container .restaurant-container-wrapper .restaurant-h3 {
+  font-weight: 300;
+  position: relative;
+  margin: 0;
+  padding-bottom: 5px;
+  font-size: 18px;
+  margin-bottom: 10px;
+  margin-top: 30px;
+}
+main .restaurant-container .restaurant-container-wrapper .restaurant-h3:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 17%;
+  /* or 100px */
+  border-bottom: 3px solid #99E2D0;
+}
+main .restaurant-container .restaurant-container-wrapper .restaurant-card-link {
+  text-decoration: none;
+  color: black;
+}
+main .restaurant-container .restaurant-container-wrapper .restaurant-small-card {
+  margin-top: 20px;
+  max-width: 350px;
+  background: white;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  border-radius: 15px;
+}
+main .restaurant-container .restaurant-container-wrapper .restaurant-small-card h4 {
+  margin: 0;
+  padding: 10px 7px 4px;
+  font-size: 18px;
+}
+main .restaurant-container .restaurant-container-wrapper .restaurant-small-card .restaurant-description-wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 7px 10px;
+}
+main .restaurant-container .restaurant-container-wrapper .restaurant-small-card .restaurant-description-wrapper p {
+  font-size: 14px;
+  margin: 0;
+}
+main .restaurant-container .restaurant-container-wrapper .restaurant-small-card .restaurant-description-wrapper span {
+  font-size: 15px;
+  margin: 0;
+  font-weight: bold;
+}
+main .restaurant-container .deserts {
+  padding-bottom: 40px;
+}
+main .restaurant-container .button-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 60px;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -14,7 +14,7 @@ body{
 }
 
 nav{
-    .logo{
+    .logo, .logo-restaurant{
         position: relative;
         display: flex;
         justify-content: center;
@@ -42,6 +42,19 @@ nav{
         }
     }
 }
+.button{
+    margin-top: 10px;
+    text-decoration: none;
+    color: white;
+    border-radius:28px;
+    background: $secondary-color;
+    display:inline-block;
+    color:#ffffff;
+    font-weight: 500;
+    font-size:14px;
+    padding:16px 31px;
+    background-image: linear-gradient(to left top, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
+}
 
 main{
     .about{
@@ -63,19 +76,6 @@ main{
         }
         p{
             font-weight: 300;
-        }
-        a{
-            margin-top: 10px;
-            text-decoration: none;
-            color: white;
-            border-radius:28px;
-            background: $secondary-color;
-            display:inline-block;
-            color:#ffffff;
-            font-weight: 500;
-            font-size:14px;
-            padding:16px 31px;
-            background-image: linear-gradient(to left top, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
         }
     }
 
@@ -244,8 +244,127 @@ main{
     //page restaurants
     .restaurant-nav{
         display: flex;
-        
-        .logo-wrapper{
-            display: flex;
+        .logo-restaurant{
+            justify-content: start;
         }
+        
+        .icon-wrapper{
+            width: 20%;
+
+            i{
+                padding-left: 10px;
+                font-size: 23px
+            }
+        }
+        .logo-wrapper{
+            width: 60%;
+            display: flex;
+            justify-content: center;
+
+            img{
+                width: 90%;
+                max-width: 100%;
+            }
+        }
+    }
+
+    main{
+        position: relative;
+
+        .restaurant-main-img-wrapper{
+            
+            img{
+                width: 100%;
+                height: 250px;
+                object-fit: cover;
+            }
+        }
+        .restaurant-container{
+            background: $light-grey;
+            position: absolute;
+            top: 220px;
+            width: 100%;
+            border-radius: 25px 25px 0 0;
+
+            .restaurant-container-wrapper{
+                padding-left: 15px;
+                padding-right: 15px;
+
+                .header-title{
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+
+                    h2{
+                        margin-bottom: 0;
+                        font-family: 'Shrikhand', cursive;
+                    }
+
+                    i{
+                        color: $darker-grey;
+                        padding-top: 20px;
+                        font-size: 21px;
+                    }
+                }
+                .restaurant-h3{
+                    font-weight: 300;
+                    position: relative;
+                    margin: 0;
+                    padding-bottom: 5px;
+                    font-size: 18px;
+                    margin-bottom: 10px;
+                    margin-top: 30px;
+                }
+                .restaurant-h3:before{
+                    content : "";
+                    position: absolute;
+                    left    : 0;
+                    bottom  : 0;
+                    width   : 17%;  /* or 100px */
+                    border-bottom:3px solid $third-color;
+                }
+                .restaurant-card-link{
+                    text-decoration: none;
+                    color: black;
+                }
+                .restaurant-small-card{
+                    margin-top: 20px;
+                    max-width: 350px;
+                    background: white;
+                    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+                    border-radius: 15px;
+
+                    h4{
+                        margin: 0;
+                        padding: 10px 7px 4px;
+                        font-size: 18px;
+                    }
+                    .restaurant-description-wrapper{
+                        display: flex;
+                        justify-content: space-between;
+                        padding: 0 7px 10px;
+
+                        p{
+                            font-size: 14px;
+                            margin: 0;
+                        }
+                        span{
+                            font-size: 15px;
+                            margin: 0;
+                            font-weight: bold;
+                        }
+                    }
+                }
+            }
+            .deserts{
+                padding-bottom: 40px;
+            }
+
+            .button-wrapper{
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                padding-bottom: 60px
+            }
+        }    
     }
