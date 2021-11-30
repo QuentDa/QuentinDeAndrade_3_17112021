@@ -11,6 +11,42 @@ body{
     box-sizing: border-box;
     margin: 0;
     font-family: 'Roboto', sans-serif;
+
+    .loading-screen{
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background: $third-color;
+        z-index: 3;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        animation: fadeout 0.5s normal forwards;
+        animation-delay: 3s;
+
+        @keyframes fadeout {
+            from{
+                opacity: 1;
+            }
+            to{
+                opacity: 0;
+                z-index: -2;
+            }
+        }
+
+        i{
+            position: absolute;
+            top: 35%;
+            font-size: 60px;
+            color: white;
+            animation: spin 4s linear infinite;
+        }
+        @-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+        @-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+        @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+        
+        
+    }
 }
 
 nav{
@@ -54,6 +90,12 @@ nav{
     font-size:14px;
     padding:16px 31px;
     background-image: linear-gradient(to left top, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
+    transition: 0.5s;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.button:hover{
+    opacity: 0.9;
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
 }
 
 main{
@@ -190,11 +232,41 @@ main{
                             margin: 5px 0 5px 0;
                             padding-left: 10px;
                         }
-                        i{
+                        .heart{
+                            opacity: 1;
+                            color: black;
                             position: absolute;
                             top: 30%;
                             right: 5%;
                             font-size: 22px;
+                            transition: 0.5s;
+                            z-index: 2;
+                        }
+                        .heart:hover{
+                            opacity: 0;
+                        }
+                        .heart:hover + a {
+                            opacity: 1;
+                        }
+                        .heart:hover + a i{
+                            transform: scale(1);
+                        }
+                        .heart-full{
+                            opacity: 0;
+                            position: absolute;
+                            top: 30%;
+                            right: 5%;
+                            font-size: 22px;
+                            z-index: 1;
+
+                            i{
+                                transform: scale(0);
+                                background-image: linear-gradient(to left top, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
+                                background-clip: text;
+                                -webkit-background-clip: text;
+                                color: transparent;
+                                transition: 0.5s;
+                            }
                         }
                     }
                 }
@@ -269,10 +341,10 @@ main{
     }
 
     main{
-        position: relative;
 
         .restaurant-main-img-wrapper{
-            
+            position: relative;
+            z-index: -1;
             img{
                 width: 100%;
                 height: 250px;
@@ -281,8 +353,7 @@ main{
         }
         .restaurant-container{
             background: $light-grey;
-            position: absolute;
-            top: 220px;
+            margin-top: -30px;
             width: 100%;
             border-radius: 25px 25px 0 0;
 
@@ -328,11 +399,14 @@ main{
                     color: black;
                 }
                 .restaurant-small-card{
+                    opacity: 0;
                     margin-top: 20px;
-                    max-width: 350px;
+                    max-width: 500px;
                     background: white;
                     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
                     border-radius: 15px;
+                    animation: cardPopIn 1.4s normal forwards;
+                    animation-delay: 0.2s;
 
                     h4{
                         margin: 0;
@@ -355,6 +429,18 @@ main{
                         }
                     }
                 }
+                @keyframes cardPopIn {
+                    from{
+                        opacity: 0;
+                        margin-top: 20px;
+                    }
+                    to{
+                        opacity: 1;
+                        margin-top: 10px;
+                    }
+                }
+
+
             }
             .deserts{
                 padding-bottom: 40px;
@@ -367,4 +453,8 @@ main{
                 padding-bottom: 60px
             }
         }    
+    }
+
+    .restaurant-footer-ul{
+        margin-top: 0;
     }
