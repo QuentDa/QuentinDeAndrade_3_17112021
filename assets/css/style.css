@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   box-sizing: border-box;
   margin: 0;
@@ -25,8 +29,9 @@ body .loading-screen {
   }
 }
 body .loading-screen i {
-  position: absolute;
-  top: 35%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: 60px;
   color: white;
   animation: spin 4s linear infinite;
@@ -161,19 +166,31 @@ main .functionalities ul .card .card-wrapper p {
   color: black;
   margin: 0;
 }
+@media screen and (min-width: 830px) {
+  main .functionalities ul {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  main .functionalities .card {
+    width: 400px;
+  }
+}
 main .restaurants {
-  padding-left: 20px;
-  padding-right: 20px;
-  margin-bottom: 70px;
+  padding: 20px 20px 60px;
   background: #f6f6f6;
 }
 main .restaurants h2 {
-  padding-top: 40px;
   padding-bottom: 20px;
 }
 main .restaurants .restaurants-cards-list {
   list-style: none;
   padding: 0;
+  margin-bottom: 0;
+}
+main .restaurants .restaurants-cards-list .restaurant-link {
+  text-decoration: none;
+  color: black;
 }
 main .restaurants .restaurants-cards-list .restaurants-card {
   margin-bottom: 25px;
@@ -248,6 +265,19 @@ main .restaurants .restaurants-cards-list .restaurants-card .text-wrapper .heart
   color: transparent;
   transition: 0.5s;
 }
+main .restaurants .restaurants-cards-list .restaurants-card:last-child {
+  margin-bottom: 0;
+}
+@media screen and (min-width: 830px) {
+  main .restaurants-cards-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  main .restaurants-card {
+    width: 590px;
+    margin-right: 25px;
+  }
+}
 
 footer {
   background: #353535;
@@ -256,6 +286,7 @@ footer {
 footer nav ul {
   list-style: none;
   padding-left: 25px;
+  margin-top: 0;
 }
 footer nav ul li {
   color: white;
@@ -290,6 +321,7 @@ footer nav ul li a {
   width: 20%;
 }
 .restaurant-nav .icon-wrapper i {
+  color: black;
   padding-left: 10px;
   font-size: 23px;
 }
@@ -297,10 +329,6 @@ footer nav ul li a {
   width: 60%;
   display: flex;
   justify-content: center;
-}
-.restaurant-nav .logo-wrapper img {
-  width: 90%;
-  max-width: 100%;
 }
 
 main .restaurant-main-img-wrapper {
@@ -323,6 +351,7 @@ main .restaurant-container .restaurant-container-wrapper {
   padding-right: 15px;
 }
 main .restaurant-container .restaurant-container-wrapper .header-title {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -331,10 +360,40 @@ main .restaurant-container .restaurant-container-wrapper .header-title h2 {
   margin-bottom: 0;
   font-family: "Shrikhand", cursive;
 }
-main .restaurant-container .restaurant-container-wrapper .header-title i {
-  color: #7e7e7e;
-  padding-top: 20px;
-  font-size: 21px;
+main .restaurant-container .restaurant-container-wrapper .header-title .restaurant-heart {
+  opacity: 1;
+  color: black;
+  position: absolute;
+  top: 35%;
+  right: 5px;
+  font-size: 22px;
+  transition: 0.5s;
+  z-index: 2;
+}
+main .restaurant-container .restaurant-container-wrapper .header-title .restaurant-heart:hover {
+  opacity: 0;
+}
+main .restaurant-container .restaurant-container-wrapper .header-title .restaurant-heart:hover + a {
+  opacity: 1;
+}
+main .restaurant-container .restaurant-container-wrapper .header-title .restaurant-heart:hover + a i {
+  transform: scale(1);
+}
+main .restaurant-container .restaurant-container-wrapper .header-title .restaurant-heart-full {
+  opacity: 0;
+  position: absolute;
+  top: 35%;
+  right: 5px;
+  font-size: 22px;
+  z-index: 1;
+}
+main .restaurant-container .restaurant-container-wrapper .header-title .restaurant-heart-full i {
+  transform: scale(0);
+  background-image: linear-gradient(to left top, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  transition: 0.5s;
 }
 main .restaurant-container .restaurant-container-wrapper .restaurant-h3 {
   font-weight: 300;
@@ -355,13 +414,15 @@ main .restaurant-container .restaurant-container-wrapper .restaurant-h3:before {
   border-bottom: 3px solid #99E2D0;
 }
 main .restaurant-container .restaurant-container-wrapper .restaurant-card-link {
+  display: block;
   text-decoration: none;
   color: black;
 }
 main .restaurant-container .restaurant-container-wrapper .restaurant-small-card {
+  width: 100%;
+  position: relative;
   opacity: 0;
   margin-top: 20px;
-  max-width: 500px;
   background: white;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   border-radius: 15px;
@@ -382,10 +443,11 @@ main .restaurant-container .restaurant-container-wrapper .restaurant-small-card 
   font-size: 14px;
   margin: 0;
 }
-main .restaurant-container .restaurant-container-wrapper .restaurant-small-card .restaurant-description-wrapper span {
+main .restaurant-container .restaurant-container-wrapper .restaurant-small-card .restaurant-description-wrapper .price {
   font-size: 15px;
   margin: 0;
   font-weight: bold;
+  transition: 1s;
 }
 @keyframes cardPopIn {
   from {
@@ -406,9 +468,77 @@ main .restaurant-container .button-wrapper {
   justify-content: center;
   padding-bottom: 60px;
 }
+@media screen and (min-width: 830px) {
+  main .restaurant-card-link {
+    width: 400px;
+    padding-right: 5px;
+  }
+  main .restaurant-cards-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
 
 .restaurant-footer-ul {
   margin-top: 0;
+}
+
+.checkbox {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  right: 0;
+  width: 0;
+  background-color: #99E2D0;
+  background-clip: padding-box;
+  border-radius: 0 15px 15px 0;
+  height: 100%;
+  transition: 1s;
+}
+.checkbox i {
+  color: white;
+  font-size: 0px;
+  transition: 0.2s;
+}
+
+.restaurant-card-link:hover .checkbox {
+  width: 60px;
+}
+
+.restaurant-card-link:hover .checkbox i {
+  animation: iconSpin 1s normal forwards;
+  font-size: 25px;
+}
+
+.restaurant-card-link:hover .price {
+  padding-right: 60px;
+}
+
+.restaurant-card-link:hover .restaurant-small-card h4 {
+  width: 70%;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+}
+
+.restaurant-card-link:hover .restaurant-small-card p {
+  width: 70%;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+}
+
+@keyframes iconSpin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
