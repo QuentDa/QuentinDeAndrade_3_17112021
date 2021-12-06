@@ -271,6 +271,7 @@ main .restaurants .restaurants-cards-list .restaurants-card:last-child {
 @media screen and (min-width: 830px) {
   main .restaurants-cards-list {
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
   }
   main .restaurants-card {
