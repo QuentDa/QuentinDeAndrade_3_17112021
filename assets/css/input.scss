@@ -263,10 +263,10 @@ main{
                         .heart:hover{
                             opacity: 0;
                         }
-                        .heart:hover + a {
+                        .heart:hover + span {
                             opacity: 1;
                         }
-                        .heart:hover + a i{
+                        .heart:hover + span i{
                             transform: scale(1);
                         }
                         .heart-full{
@@ -416,10 +416,10 @@ main{
                     .restaurant-heart:hover{
                         opacity: 0;
                     }
-                    .restaurant-heart:hover + a {
+                    .restaurant-heart:hover + span {
                         opacity: 1;
                     }
-                    .restaurant-heart:hover + a i{
+                    .restaurant-heart:hover + span i{
                         transform: scale(1);
                     }
                     .restaurant-heart-full{
