@@ -243,10 +243,10 @@ main .restaurants .restaurants-cards-list .restaurants-card .text-wrapper .heart
 main .restaurants .restaurants-cards-list .restaurants-card .text-wrapper .heart:hover {
   opacity: 0;
 }
-main .restaurants .restaurants-cards-list .restaurants-card .text-wrapper .heart:hover + a {
+main .restaurants .restaurants-cards-list .restaurants-card .text-wrapper .heart:hover + span {
   opacity: 1;
 }
-main .restaurants .restaurants-cards-list .restaurants-card .text-wrapper .heart:hover + a i {
+main .restaurants .restaurants-cards-list .restaurants-card .text-wrapper .heart:hover + span i {
   transform: scale(1);
 }
 main .restaurants .restaurants-cards-list .restaurants-card .text-wrapper .heart-full {
@@ -374,10 +374,10 @@ main .restaurant-container .restaurant-container-wrapper .header-title .restaura
 main .restaurant-container .restaurant-container-wrapper .header-title .restaurant-heart:hover {
   opacity: 0;
 }
-main .restaurant-container .restaurant-container-wrapper .header-title .restaurant-heart:hover + a {
+main .restaurant-container .restaurant-container-wrapper .header-title .restaurant-heart:hover + span {
   opacity: 1;
 }
-main .restaurant-container .restaurant-container-wrapper .header-title .restaurant-heart:hover + a i {
+main .restaurant-container .restaurant-container-wrapper .header-title .restaurant-heart:hover + span i {
   transform: scale(1);
 }
 main .restaurant-container .restaurant-container-wrapper .header-title .restaurant-heart-full {
